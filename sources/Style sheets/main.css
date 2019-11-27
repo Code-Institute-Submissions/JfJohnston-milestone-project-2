@@ -1,12 +1,45 @@
 /* ------------------- place holder -------------------*/
 /* ------------------- template editing -------------------*/
 
-.align-bottom {
-    position: absolute;
-    bottom: 0;
+/* header */
+
+header{
+    background-color: #000000;
+    color: #daa520; 
 }
 
-nav>ul>li{
+header a{
+    text-decoration: none;
+    color: #daa520;
+}
+
+nav ul li{
     list-style-type: none;
+    font-size: 20px;
+}
+
+/* Aside */ 
+
+aside {
+    background-color: #5f9ea0;
+}
+
+.sm-img-con{
+    height: 64px;
+    width: 64px;
+}
+
+/* various */
+
+.border-black-bot{
+    border-bottom-color: #000000;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+}
+
+.border-black-left{
+    border-left-color: #000000;
+    border-left-width: 1px;
+    border-left-style: solid;
 }
 
