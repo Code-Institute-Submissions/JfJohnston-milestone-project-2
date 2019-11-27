@@ -1,0 +1,5 @@
+Starting Deck
+Clank!: 2
+Other: 8
+
+Areas - hand, deck, discard

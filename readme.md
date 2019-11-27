@@ -17,7 +17,7 @@ For example, if a user opens the secion for "Betrayal At Baldur's Gate" they wil
 
 - "Betrayal at Baldur's gate" tile management
 - "Clank!" deck management + shuffle mechanics
-
+- "Order of the Stick" standard deck with positive effects when drawing cards, unless it's a trap. 2 possible starting setups depending of if the user has the expansion.
 - Custom deck creation
 
 ## Technology Used

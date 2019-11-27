@@ -1,0 +1,17 @@
+Catacomb Tiles
+Items: 3
+Events: 3
+Omens: 7
+Blank: 2
+
+Building Tiles
+Items: 4
+Events: 7
+Omens: 2
+Blank: 0
+
+Street Tiles
+Items: 1
+Events: 7 
+Omens: 4
+Blank: 2 

@@ -1,0 +1,11 @@
+Main treasure Deck
+Rewards: 103
+Traps: 21
+
+The shortening deck
+Rewards: 12
+Traps: 0
+
+Total:
+Rewards: 115
+Traps: 21
