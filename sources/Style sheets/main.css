@@ -43,3 +43,6 @@ aside {
     border-left-style: solid;
 }
 
+a:hover {
+    text-decoration: none;
+}
