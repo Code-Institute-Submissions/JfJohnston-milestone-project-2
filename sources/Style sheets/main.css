@@ -18,6 +18,34 @@ nav ul li{
     font-size: 20px;
 }
 
+header div .pad-top-30{
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Main */
+
+.cont-contain{
+    background-color: #ecd2d2;
+    background-size: contain;
+}
+
+main .page-title{
+    padding-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-decoration: underline dimgray;
+    text-align: center;
+}
+
+main .page-info{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 /* Aside */ 
 
 aside {
@@ -27,6 +55,16 @@ aside {
 .sm-img-con{
     height: 64px;
     width: 64px;
+}
+
+/* Footer */
+
+footer span{
+    Padding-left: 20px;
+}
+
+.footer-social-links{
+    text-align: center;    
 }
 
 /* various */

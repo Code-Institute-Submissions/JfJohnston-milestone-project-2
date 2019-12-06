@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Do I Draw?</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href=".\sources\Style sheets\main.css"> <!--for main pages-->
-    <link rel="stylesheet" href="..\sources\Style sheets\main.css"> <!--for template and game pages-->  
-
+    <link rel="stylesheet" href="..\sources\Style sheets\main.css"> <!--for template and game pages-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src=""></script> <!--Page unique-->
 </head>
 <body>
     <header>
@@ -16,28 +18,28 @@
             <div class="col-9">
                 <div class="row">
                     <div class="col-4 title">
-                        <a href="index.html"><h1>Do I Draw?</h1></a>
+                        <a href="..\index.html"><h1>Do I Draw?</h1></a><!---remove extra dot on main pages-->
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 pad-top-30">
                         <p>Play better games by knowing the odds, we'll do the math so you don't have to!</p>
                     </div>
                 </div>
             </div>
             <nav class="col-3">  
                 <ul class="row container-fluid">
-                    <li class="col-12 col-xl-4"><a href="">Game List</a></li>
-                    <li class="col-12 col-xl-4"><a href="">Coming Soon</a></li>
-                    <li class="col-12 col-xl-4"><a href="">Contact Me</a></li>
+                    <li class="col-12 col-xl-4"><a href="..\livegames.html">Game List</a></li><!---remove extra dot on main pages-->
+                    <li class="col-12 col-xl-4"><a href="..\upcoming.html">Coming Soon</a></li><!---remove extra dot on main pages-->
+                    <li class="col-12 col-xl-4"><a href="..\contactme.html">Contact Me</a></li><!---remove extra dot on main pages-->
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="row">
+    <div class="row cont-contain">
         <main class="col-12 col-md-9 border-black-bot">
         <div class="row">
             <div class="col-12 pagedesc">
-                <h2 class="page-title"></h2>
-                <p class="page-info"></p>
+                <h2 class="page-title">Lorem, ipsum dolor.</h2>
+                <p class="page-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium quod consequatur vero? Maiores quas accusantium aut minima labore, omnis tempore architecto molestias quam nobis. Maiores nemo repellat placeat excepturi officiis inventore dignissimos recusandae libero cum veritatis? Quod dolorem, explicabo nisi porro tempore nesciunt totam error ducimus quia consectetur! Dolorum, officiis.</p>
             </div>
             <div class="col-12" id="psia-[page]"></div>
         </div>
@@ -85,9 +87,22 @@
     </div>
     <footer>
 <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4"></div>
-    <div class="col-4"></div>
+    <div class="col-6 col-sm-4 copyright"><span>Site by Joseph Johnston.</span>
+</div>
+<div class="col-sm-4 d.none"></div>
+<div class="col-6 col-sm-4 footer-social-links">
+    <h4>Find us here:</h4>
+    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Twitch Channel"
+            class="fab fa-twitch"></i></a>
+    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Facebook Page"
+            class="fab fa-facebook"></i></a>
+    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Youtube Channel"
+            class="fab fa-youtube"></i></a>
+    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Twitter Account"
+            class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Instagram Account"
+            class="fab fa-instagram"></i></a>
+</div>
 </div>
     </footer>
 </body>
