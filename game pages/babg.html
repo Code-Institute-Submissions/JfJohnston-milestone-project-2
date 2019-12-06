@@ -56,26 +56,26 @@
                         <tr>
                             <th scope="row">Events</th>
                             <td><button class="draw" onclick="strevdraw()">Draw</button><p class="count">Remaining <span id="str-ev-c">7</span> || Chance <span id="str-ev-p">50</span>%</p></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick="buievdraw()">Draw</button><p class="count">Remaining <span id="bui-ev-c">7</span> || Chance <span id="bui-ev-p">54</span>%</p></td>
+                            <td><button class="draw" onclick="basevdraw()">Draw</button><p class="count">Remaining <span id="bas-ev-c">3</span> || Chance <span id="bas-ev-p">20</span>%</p></td>
                         </tr>
                         <tr>
                             <th scope="row">Items</th>
                             <td><button class="draw" onclick="stritdraw()">Draw</button><p class="count">Remaining <span id="str-it-c">1</span> || Chance <span id="str-it-p">7</span>%</p></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick="buiitdraw()">Draw</button><p class="count">Remaining <span id="bui-ev-c">4</span> || Chance <span id="bui-ev-p">31</span>%</p></td>
+                            <td><button class="draw" onclick="basitdraw()">Draw</button><p class="count">Remaining <span id="bas-ev-c">3</span> || Chance <span id="bas-ev-p">20</span>%</p></td>
                         </tr>
                         <tr>
                             <th scope="row">Omens</th>
                             <td><button class="draw" onclick="stromdraw()">Draw</button><p class="count">Remaining <span id="str-om-c">4</span> || Chance <span id="str-om-p">29</span>%</p></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick="buiomdraw()">Draw</button><p class="count">Remaining <span id="bui-ev-c">2</span> || Chance <span id="bui-ev-p">15</span>%</p></td>
+                            <td><button class="draw" onclick="basomdraw()">Draw</button><p class="count">Remaining <span id="bas-ev-c">7</span> || Chance <span id="bas-ev-p">47</span>%</p></td>
                         </tr>
                         <tr>
                             <th scope="row">Blank</th>
                             <td><button class="draw" onclick="strbldraw()">Draw</button><p class="count">Remaining <span id="str-bl-c">2</span> || Chance <span id="str-bl-p">14</span>%</p></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
-                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick="buibldraw()">Draw</button><p class="count">Remaining <span id="bui-ev-c">0</span> || Chance <span id="bui-ev-p">0</span>%</p></td>
+                            <td><button class="draw" onclick="basbldraw()">Draw</button><p class="count">Remaining <span id="bas-ev-c">2</span> || Chance <span id="bas-ev-p">13</span>%</p></td>
                         </tr>
                     </tbody>
                 </table>
@@ -152,6 +152,22 @@ function babgreset() {
     document.getElementById("str-om-p").innerHTML = 29;
     document.getElementById("str-bl-c").innerHTML = 2;
     document.getElementById("str-bl-p").innerHTML = 14;
+    document.getElementById("bui-ev-c").innerHTML = 7;
+    document.getElementById("bui-ev-p").innerHTML = 54;
+    document.getElementById("bui-it-c").innerHTML = 4;
+    document.getElementById("bui-it-p").innerHTML = 31;
+    document.getElementById("bui-om-c").innerHTML = 2;
+    document.getElementById("bui-om-p").innerHTML = 15;
+    document.getElementById("bui-bl-c").innerHTML = 0;
+    document.getElementById("bui-bl-p").innerHTML = 0;
+    document.getElementById("bas-ev-c").innerHTML = 3;
+    document.getElementById("bas-ev-p").innerHTML = 20;
+    document.getElementById("bas-it-c").innerHTML = 3;
+    document.getElementById("bas-it-p").innerHTML = 20;
+    document.getElementById("bas-om-c").innerHTML = 7;
+    document.getElementById("bas-om-p").innerHTML = 47;
+    document.getElementById("bas-bl-c").innerHTML = 2;
+    document.getElementById("bas-bl-p").innerHTML = 13;
 }
 
 function strevdraw() {
@@ -190,6 +206,78 @@ function strbldraw() {
     }
 }
 
+function buievdraw() {
+    if (parseInt(document.getElementById("bui-ev-c").innerHTML) != 0){
+    document.getElementById("bui-ev-c").innerHTML = parseInt(document.getElementById("bui-ev-c").innerHTML) - 1;
+    buipcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function buiitdraw() {
+    if (parseInt(document.getElementById("bui-it-c").innerHTML) != 0){
+    document.getElementById("bui-it-c").innerHTML = parseInt(document.getElementById("bui-it-c").innerHTML) - 1;
+    buipcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function buiomdraw() {
+    if (parseInt(document.getElementById("bui-om-c").innerHTML) != 0){
+    document.getElementById("bui-om-c").innerHTML = parseInt(document.getElementById("bui-om-c").innerHTML) - 1;
+    buipcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function buibldraw() {
+    if (parseInt(document.getElementById("bui-bl-c").innerHTML) != 0){
+    document.getElementById("bui-bl-c").innerHTML = parseInt(document.getElementById("bui-bl-c").innerHTML) - 1;
+    buipcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function basevdraw() {
+    if (parseInt(document.getElementById("bas-ev-c").innerHTML) != 0){
+    document.getElementById("bas-ev-c").innerHTML = parseInt(document.getElementById("bas-ev-c").innerHTML) - 1;
+    baspcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function basitdraw() {
+    if (parseInt(document.getElementById("bas-it-c").innerHTML) != 0){
+    document.getElementById("bas-it-c").innerHTML = parseInt(document.getElementById("bas-it-c").innerHTML) - 1;
+    baspcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function basomdraw() {
+    if (parseInt(document.getElementById("bas-om-c").innerHTML) != 0){
+    document.getElementById("bas-om-c").innerHTML = parseInt(document.getElementById("bas-om-c").innerHTML) - 1;
+    baspcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function basbldraw() {
+    if (parseInt(document.getElementById("bas-bl-c").innerHTML) != 0){
+    document.getElementById("bas-bl-c").innerHTML = parseInt(document.getElementById("bas-bl-c").innerHTML) - 1;
+    baspcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
 function strpcalc() {
     strevp();
     stritp();
@@ -211,6 +299,52 @@ function stromp(){
 
 function strblp(){
     document.getElementById("str-bl-p").innerHTML = parseInt(document.getElementById("str-bl-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML))*100;
+}
+
+function buipcalc() {
+    buievp();
+    buiitp();
+    buiomp();
+    buiblp();
+}
+
+function buievp(){
+    document.getElementById("bui-ev-p").innerHTML = parseInt(document.getElementById("bui-ev-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+}
+
+function buiitp(){
+    document.getElementById("bui-it-p").innerHTML = parseInt(document.getElementById("bui-it-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+}
+
+function buiomp(){
+    document.getElementById("bui-om-p").innerHTML = parseInt(document.getElementById("bui-om-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+}
+
+function buiblp(){
+    document.getElementById("bui-bl-p").innerHTML = parseInt(document.getElementById("bui-bl-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+}
+
+function baspcalc() {
+    basevp();
+    basitp();
+    basomp();
+    basblp();
+}
+
+function basevp(){
+    document.getElementById("bas-ev-p").innerHTML = parseInt(document.getElementById("bas-ev-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
+}
+
+function basitp(){
+    document.getElementById("bas-it-p").innerHTML = parseInt(document.getElementById("bas-it-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
+}
+
+function basomp(){
+    document.getElementById("bas-om-p").innerHTML = parseInt(document.getElementById("bas-om-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
+}
+
+function basblp(){
+    document.getElementById("bas-bl-p").innerHTML = parseInt(document.getElementById("bas-bl-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
 }
 </script>
 
