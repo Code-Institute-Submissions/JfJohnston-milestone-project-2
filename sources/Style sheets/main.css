@@ -25,6 +25,10 @@ header div .pad-top-30{
 }
 
 /* Main */
+
+main {
+    min-height: 1200px;
+}
 .reset-button{
     text-align: center;
 }
