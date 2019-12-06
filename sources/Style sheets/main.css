@@ -25,6 +25,9 @@ header div .pad-top-30{
 }
 
 /* Main */
+.reset-button{
+    text-align: center;
+}
 
 .cont-contain{
     background-color: #ecd2d2;

@@ -7,8 +7,9 @@
     <title>Do I Draw?</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./sources/Style sheets/main.css"> <!--for main pages-->
     <link rel="stylesheet" href="../sources/Style sheets/main.css"> <!--for template and game pages-->
+    <link rel="stylesheet" href="../sources/Style sheets/babg.css"> <!--game specific-->
+
     
 </head>
 <body>
@@ -41,8 +42,43 @@
                 <p class="page-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium quod consequatur vero? Maiores quas accusantium aut minima labore, omnis tempore architecto molestias quam nobis. Maiores nemo repellat placeat excepturi officiis inventore dignissimos recusandae libero cum veritatis? Quod dolorem, explicabo nisi porro tempore nesciunt totam error ducimus quia consectetur! Dolorum, officiis.</p>
             </div>
             <div class="col-12" id="psia-babg">
-                <button onclick="streetomendraw()">testing</button>
-                <div><p id="street-omen-tiles">4</p></div>
+                <h3 class= "reset-button"><button onclick="babgreset()">Reset The Game</button></h3>
+                <table class="babg-table table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Street</th>
+                            <th scope="col">Building</th>
+                            <th scope="col">Basement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Events</th>
+                            <td><button class="draw" onclick="strevdraw()">Draw</button><p class="count">Remaining <span id="str-ev-c">4</span>|| Chance <span id="str-ev-p"></span>%</p></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Items</th>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Omens</th>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Blank</th>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick=>Draw</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         </main>
@@ -106,11 +142,15 @@
             class="fab fa-instagram"></i></a>
 </div>
 </div>
-<script >
-function streetomendraw() {
-    if (parseInt(document.getElementById("street-omen-tiles").innerHTML) != 0){
-    document.getElementById("street-omen-tiles").innerHTML = parseInt(document.getElementById("street-omen-tiles").innerHTML) - 1;
-    
+<script>
+function babgreset(){
+    document.getElementById("str-ev-c").innerHTML = 4;
+    document.getElementById("str-ev-p").innerHTML = 50;
+}
+
+function strevdraw() {
+    if (parseInt(document.getElementById("str-ev-c").innerHTML) != 0){
+    document.getElementById("str-ev-c").innerHTML = parseInt(document.getElementById("str-ev-c").innerHTML) - 1
     }else{
         alert("No such tile exists")
     }
@@ -119,3 +159,6 @@ function streetomendraw() {
     </footer>
 </body>
 </html>
+
+<button onclick="streetomendraw()">testing</button>
+                <div><p id="street-omen-tiles">4</p></div>

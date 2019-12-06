@@ -1,0 +1,11 @@
+/* Buttons */
+
+.draw{
+    color: goldenrod;
+    background-color: darkgreen;
+}
+
+.reset-button>button{
+    color: goldenrod;
+    background-color: darkgreen;
+}
