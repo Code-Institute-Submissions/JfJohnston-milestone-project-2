@@ -157,7 +157,7 @@ function babgreset() {
 function strevdraw() {
     if (parseInt(document.getElementById("str-ev-c").innerHTML) != 0){
     document.getElementById("str-ev-c").innerHTML = parseInt(document.getElementById("str-ev-c").innerHTML) - 1;
-    function strpcalc();
+    strpcalc();
     }else{
         alert("No such tile exists");
     }
@@ -166,7 +166,7 @@ function strevdraw() {
 function stritdraw() {
     if (parseInt(document.getElementById("str-it-c").innerHTML) != 0){
     document.getElementById("str-it-c").innerHTML = parseInt(document.getElementById("str-it-c").innerHTML) - 1;
-    function strpcalc();
+    strpcalc();
     }else{
         alert("No such tile exists");
     }
@@ -175,7 +175,7 @@ function stritdraw() {
 function stromdraw() {
     if (parseInt(document.getElementById("str-om-c").innerHTML) != 0){
     document.getElementById("str-om-c").innerHTML = parseInt(document.getElementById("str-om-c").innerHTML) - 1;
-    function strpcalc();
+    strpcalc();
     }else{
         alert("No such tile exists");
     }
@@ -184,33 +184,33 @@ function stromdraw() {
 function strbldraw() {
     if (parseInt(document.getElementById("str-bl-c").innerHTML) != 0){
     document.getElementById("str-bl-c").innerHTML = parseInt(document.getElementById("str-bl-c").innerHTML) - 1;
-    function strpcalc();
+    strpcalc();
     }else{
         alert("No such tile exists");
     }
 }
 
 function strpcalc() {
-    function strevp();
-    function stritp();
-    function stromp();
-    function strblp();
+    strevp();
+    stritp();
+    stromp();
+    strblp();
 }
 
 function strevp(){
-    document.getElementById("str-ev-p").innerHTML = round(parseInt(document.getElementById("str-ev-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+    document.getElementById("str-ev-p").innerHTML = parseInt(document.getElementById("str-ev-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML))*100;
 }
 
 function stritp(){
-    document.getElementById("str-it-p").innerHTML = round(parseInt(document.getElementById("str-it-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+    document.getElementById("str-it-p").innerHTML = parseInt(document.getElementById("str-it-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML))*100;
 }
 
 function stromp(){
-    document.getElementById("str-om-p").innerHTML = round(parseInt(document.getElementById("str-om-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+    document.getElementById("str-om-p").innerHTML = parseInt(document.getElementById("str-om-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML))*100;
 }
 
 function strblp(){
-    document.getElementById("str-bl-p").innerHTML = round(parseInt(document.getElementById("str-bl-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+    document.getElementById("str-bl-p").innerHTML = parseInt(document.getElementById("str-bl-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML))*100;
 }
 </script>
 
