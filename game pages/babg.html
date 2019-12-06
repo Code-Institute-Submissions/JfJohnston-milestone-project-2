@@ -55,25 +55,25 @@
                     <tbody>
                         <tr>
                             <th scope="row">Events</th>
-                            <td><button class="draw" onclick="strevdraw()">Draw</button><p class="count">Remaining <span id="str-ev-c">4</span>|| Chance <span id="str-ev-p"></span>%</p></td>
+                            <td><button class="draw" onclick="strevdraw()">Draw</button><p class="count">Remaining <span id="str-ev-c">7</span> || Chance <span id="str-ev-p">50</span>%</p></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                         </tr>
                         <tr>
                             <th scope="row">Items</th>
-                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick="stritdraw()">Draw</button><p class="count">Remaining <span id="str-it-c">1</span> || Chance <span id="str-it-p">7</span>%</p></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                         </tr>
                         <tr>
                             <th scope="row">Omens</th>
-                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick="stromdraw()">Draw</button><p class="count">Remaining <span id="str-om-c">4</span> || Chance <span id="str-om-p">29</span>%</p></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                         </tr>
                         <tr>
                             <th scope="row">Blank</th>
-                            <td><button class="draw" onclick=>Draw</button></td>
+                            <td><button class="draw" onclick="strbldraw()">Draw</button><p class="count">Remaining <span id="str-bl-c">2</span> || Chance <span id="str-bl-p">14</span>%</p></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                             <td><button class="draw" onclick=>Draw</button></td>
                         </tr>
@@ -143,22 +143,77 @@
 </div>
 </div>
 <script>
-function babgreset(){
-    document.getElementById("str-ev-c").innerHTML = 4;
+function babgreset() {
+    document.getElementById("str-ev-c").innerHTML = 7;
     document.getElementById("str-ev-p").innerHTML = 50;
+    document.getElementById("str-it-c").innerHTML = 1;
+    document.getElementById("str-it-p").innerHTML = 7;
+    document.getElementById("str-om-c").innerHTML = 4;
+    document.getElementById("str-om-p").innerHTML = 29;
+    document.getElementById("str-bl-c").innerHTML = 2;
+    document.getElementById("str-bl-p").innerHTML = 14;
 }
 
 function strevdraw() {
     if (parseInt(document.getElementById("str-ev-c").innerHTML) != 0){
-    document.getElementById("str-ev-c").innerHTML = parseInt(document.getElementById("str-ev-c").innerHTML) - 1
+    document.getElementById("str-ev-c").innerHTML = parseInt(document.getElementById("str-ev-c").innerHTML) - 1;
+    function strpcalc();
     }else{
-        alert("No such tile exists")
+        alert("No such tile exists");
     }
-};
+}
+
+function stritdraw() {
+    if (parseInt(document.getElementById("str-it-c").innerHTML) != 0){
+    document.getElementById("str-it-c").innerHTML = parseInt(document.getElementById("str-it-c").innerHTML) - 1;
+    function strpcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function stromdraw() {
+    if (parseInt(document.getElementById("str-om-c").innerHTML) != 0){
+    document.getElementById("str-om-c").innerHTML = parseInt(document.getElementById("str-om-c").innerHTML) - 1;
+    function strpcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function strbldraw() {
+    if (parseInt(document.getElementById("str-bl-c").innerHTML) != 0){
+    document.getElementById("str-bl-c").innerHTML = parseInt(document.getElementById("str-bl-c").innerHTML) - 1;
+    function strpcalc();
+    }else{
+        alert("No such tile exists");
+    }
+}
+
+function strpcalc() {
+    function strevp();
+    function stritp();
+    function stromp();
+    function strblp();
+}
+
+function strevp(){
+    document.getElementById("str-ev-p").innerHTML = round(parseInt(document.getElementById("str-ev-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+}
+
+function stritp(){
+    document.getElementById("str-it-p").innerHTML = round(parseInt(document.getElementById("str-it-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+}
+
+function stromp(){
+    document.getElementById("str-om-p").innerHTML = round(parseInt(document.getElementById("str-om-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+}
+
+function strblp(){
+    document.getElementById("str-bl-p").innerHTML = round(parseInt(document.getElementById("str-bl-c").innerHTML)/(parseInt(document.getElementById("str-ev-c").innerHTML)+parseInt(document.getElementById("str-it-c").innerHTML)+parseInt(document.getElementById("str-om-c").innerHTML)+parseInt(document.getElementById("str-bl-c").innerHTML)))*100;
+}
 </script>
+
     </footer>
 </body>
 </html>
-
-<button onclick="streetomendraw()">testing</button>
-                <div><p id="street-omen-tiles">4</p></div>
