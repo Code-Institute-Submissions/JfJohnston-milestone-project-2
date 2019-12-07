@@ -60,13 +60,21 @@ main .page-info{
     color: brown;
 }
 .sm-img-con {
-    max-width: 96px;
-    max-height: 96px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .sm-img{
+    display:block;
     max-width: 96px;
     max-height: 96px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.game-page-link {
+    text-align: center;
 }
 
 /* Footer */
