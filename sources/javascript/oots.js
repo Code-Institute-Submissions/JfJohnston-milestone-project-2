@@ -16,7 +16,7 @@ function percentcalc(){
 }
 
 function drawtreasure() {
-    if (parseInt(document.getElementById("treas-c").innerHTML) != 0){
+    if (parseInt(document.getElementById("treas-c").innerHTML) != 0 && document.getElementById("treas-c").innerHTML != ""){
     document.getElementById("treas-c").innerHTML = parseInt(document.getElementById("treas-c").innerHTML) - 1;
     percentcalc();
     }else{
@@ -25,7 +25,7 @@ function drawtreasure() {
 }
 
 function drawtrap() {
-    if (parseInt(document.getElementById("trap-c").innerHTML) != 0){
+    if (parseInt(document.getElementById("trap-c").innerHTML) != 0 && document.getElementById("trap-c").innerHTML != ""){
     document.getElementById("trap-c").innerHTML = parseInt(document.getElementById("trap-c").innerHTML) - 1;
     percentcalc();
     }else{
