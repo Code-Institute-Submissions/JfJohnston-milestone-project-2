@@ -54,15 +54,10 @@ main .page-info{
     text-align: center;
 }
 
-/* Aside */ 
-
-aside {
-    background-color: #5f9ea0;
-}
-
-.sm-img-con{
-    height: 64px;
-    width: 64px;
+#psia-index>p{
+    padding-top: 10px;
+    text-align: center;
+    color: brown;
 }
 
 /* Footer */
