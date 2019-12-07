@@ -16,7 +16,7 @@
 
 .table .draw{
     color: yellow;
-    background-color: black;
+    background-color: rgb(121, 121, 121);
     border: 1px solid yellow;
 }
 
@@ -40,4 +40,8 @@
     text-align: center;
     color: Yellow;
     background-color: black;
+}
+
+.table td span, .table td p{
+    display: inline-block;
 }
