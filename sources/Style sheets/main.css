@@ -59,6 +59,15 @@ main .page-info{
     text-align: center;
     color: brown;
 }
+.sm-img-con {
+    max-width: 96px;
+    max-height: 96px;
+}
+
+.sm-img{
+    max-width: 96px;
+    max-height: 96px;
+}
 
 /* Footer */
 
