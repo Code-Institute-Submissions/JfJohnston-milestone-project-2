@@ -1,70 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Do I Draw?</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../sources/Style sheets/main.css"> <!--for template and game pages-->
-    <script src=""></script> <!--Page unique-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../sources/Style sheets/main.css">
+    <!--for template and game pages-->
+    <link rel="stylesheet" href="../sources/Style sheets/oots.css">
 </head>
+
 <body>
     <header>
         <div class="row container-fluid border-black-bot m-0">
             <div class="col-9">
                 <div class="row">
                     <div class="col-4 title">
-                        <a href="../index.html"><h1>Do I Draw?</h1></a><!---remove extra dot on main pages-->
+                        <a href="../index.html">
+                            <h1>Do I Draw?</h1>
+                        </a>
+                        <!---remove extra dot on main pages-->
                     </div>
                     <div class="col-8 pad-top-30">
                         <p>Play better games by knowing the odds, we'll do the math so you don't have to!</p>
                     </div>
                 </div>
             </div>
-            <nav class="col-3">  
+            <nav class="col-3">
                 <ul class="row container-fluid">
-                    <li class="col-12 col-xl-4"><a href="../livegames.html">Game List</a></li><!---remove extra dot on main pages-->
-                    <li class="col-12 col-xl-4"><a href="../upcoming.html">Coming Soon</a></li><!---remove extra dot on main pages-->
-                    <li class="col-12 col-xl-4"><a href="../contactme.html">Contact Me</a></li><!---remove extra dot on main pages-->
+                    <li class="col-12 col-xl-4"><a href="../livegames.html">Game List</a></li>
+                    <!---remove extra dot on main pages-->
+                    <li class="col-12 col-xl-4"><a href="../upcoming.html">Coming Soon</a></li>
+                    <!---remove extra dot on main pages-->
+                    <li class="col-12 col-xl-4"><a href="../contactme.html">Contact Me</a></li>
+                    <!---remove extra dot on main pages-->
                 </ul>
             </nav>
         </div>
     </header>
-        <main class="row border-black-bot cont-contain">
-            <div class="col-12 pagedesc">
-                <h2 class="page-title">The Order of the Stick Adventure Game</h2>
-                <p class="page-info">The loot of fallen foes lies at your feet, but you know it might be trapped.
-                    <br>If you kept track of how many traps have already triggered you'd feel better. Use this page to know how much risk to take.
-                    <br>Whenever treasue or a trap is drawn note it and we'll tell you how likely the next draw is to be trapped.</p>
+    <main class="row border-black-bot cont-contain">
+        <div class="col-12 pagedesc">
+            <h2 class="page-title">The Order of the Stick Adventure Game</h2>
+            <p class="page-info">The loot of fallen foes lies at your feet, but you know it might be trapped.
+                <br>If you kept track of how many traps have already triggered you'd feel better. Use this page to know
+                how much risk to take.
+                <br>Whenever a treasue or a trap is drawn note it and we'll tell you how likely the next draw is to be
+                trapped.</p>
+            <div class="row">
+                <div class="col-12" id="psia-oots">
+                    <h3 class="reset-button"><button onclick="ootsbasereset()">Play Base Game</button></h3>
+                    <h3 class="reset-button"><button onclick="ootsexpreset()">Play With Expansion</button></h3>
+                    <div class="row">
+                        <div class="col-md-3 col-6 blank"></div>
+                        <div class="col-md-3 col-6">
+                            <table class="oots-tre-table table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <h5>Treasure</h5>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <table class="oots-tre-table table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <h5>Traps!!</h5>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-3 col-6 blank"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12" id="psia-oots">
-                
-            </div>
-        </main>
+    </main>
     <footer>
-<div class="row">
-    <div class="col-6 col-sm-4 copyright"><span>Site by Joseph Johnston.</span>
-</div>
-<div class="col-sm-4 d.none"></div>
-<div class="col-6 col-sm-4 footer-social-links">
-    <h4>Find us here:</h4>
-    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Twitch Channel"
-            class="fab fa-twitch"></i></a>
-    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Facebook Page"
-            class="fab fa-facebook"></i></a>
-    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Youtube Channel"
-            class="fab fa-youtube"></i></a>
-    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Twitter Account"
-            class="fab fa-twitter"></i></a>
-    <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Instagram Account"
-            class="fab fa-instagram"></i></a>
-</div>
-</div>
-<script src="../sources/javascript/oots.js"></script>
-</footer>
+        <div class="row">
+            <div class="col-6 col-sm-4 copyright"><span>Site by Joseph Johnston.</span>
+            </div>
+            <div class="col-sm-4 d.none"></div>
+            <div class="col-6 col-sm-4 footer-social-links">
+                <h4>Find us here:</h4>
+                <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Twitch Channel"
+                        class="fab fa-twitch"></i></a>
+                <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Facebook Page"
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Youtube Channel"
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Twitter Account"
+                        class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/watch?v=4pkhEyRoidk" target="\_blank"><i aria-label="Instagram Account"
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <script src="../sources/javascript/oots.js"></script>
+    </footer>
 </body>
+
 </html>
-
-

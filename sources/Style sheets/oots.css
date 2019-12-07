@@ -1,0 +1,43 @@
+/* layout fix */
+
+.cont-contain{
+    background-color: #ffffff;
+    background-size: contain;
+}
+
+/* buttons */
+
+.reset-button>button{
+    margin-top: 35px;
+    color: black;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.table .draw{
+    color: yellow;
+    background-color: black;
+    border: 1px solid yellow;
+}
+
+
+/* bootstrap fix */
+
+.table-bordered{
+    border: 2px solid yellow;
+}
+
+.table-bordered td, .table-bordered th{
+    border: 2px solid yellow;
+}
+
+.table thead th{
+    border: 2px solid yellow;
+}
+
+.table {
+    margin-top: 35px;
+    text-align: center;
+    color: Yellow;
+    background-color: black;
+}

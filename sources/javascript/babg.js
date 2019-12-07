@@ -164,19 +164,19 @@ function buipcalc() {
 }
 
 function buievp(){
-    document.getElementById("bui-ev-p").innerHTML = parseInt(document.getElementById("bui-ev-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+    document.getElementById("bui-ev-p").innerHTML = Math.round(parseInt(document.getElementById("bui-ev-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100);
 }
 
 function buiitp(){
-    document.getElementById("bui-it-p").innerHTML = parseInt(document.getElementById("bui-it-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+    document.getElementById("bui-it-p").innerHTML = Math.round(parseInt(document.getElementById("bui-it-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100);
 }
 
 function buiomp(){
-    document.getElementById("bui-om-p").innerHTML = parseInt(document.getElementById("bui-om-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+    document.getElementById("bui-om-p").innerHTML = Math.round(parseInt(document.getElementById("bui-om-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100);
 }
 
 function buiblp(){
-    document.getElementById("bui-bl-p").innerHTML = parseInt(document.getElementById("bui-bl-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100;
+    document.getElementById("bui-bl-p").innerHTML = Math.round(parseInt(document.getElementById("bui-bl-c").innerHTML)/(parseInt(document.getElementById("bui-ev-c").innerHTML)+parseInt(document.getElementById("bui-it-c").innerHTML)+parseInt(document.getElementById("bui-om-c").innerHTML)+parseInt(document.getElementById("bui-bl-c").innerHTML))*100);
 }
 
 function baspcalc() {
@@ -187,17 +187,17 @@ function baspcalc() {
 }
 
 function basevp(){
-    document.getElementById("bas-ev-p").innerHTML = parseInt(document.getElementById("bas-ev-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
+    document.getElementById("bas-ev-p").innerHTML = Math.round(parseInt(document.getElementById("bas-ev-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100);
 }
 
 function basitp(){
-    document.getElementById("bas-it-p").innerHTML = parseInt(document.getElementById("bas-it-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
+    document.getElementById("bas-it-p").innerHTML = Math.round(parseInt(document.getElementById("bas-it-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100);
 }
 
 function basomp(){
-    document.getElementById("bas-om-p").innerHTML = parseInt(document.getElementById("bas-om-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
+    document.getElementById("bas-om-p").innerHTML = Math.round(parseInt(document.getElementById("bas-om-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100);
 }
 
 function basblp(){
-    document.getElementById("bas-bl-p").innerHTML = parseInt(document.getElementById("bas-bl-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100;
+    document.getElementById("bas-bl-p").innerHTML = Math.round(parseInt(document.getElementById("bas-bl-c").innerHTML)/(parseInt(document.getElementById("bas-ev-c").innerHTML)+parseInt(document.getElementById("bas-it-c").innerHTML)+parseInt(document.getElementById("bas-om-c").innerHTML)+parseInt(document.getElementById("bas-bl-c").innerHTML))*100);
 }
